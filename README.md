@@ -1,2 +1,3 @@
-# Sorting Algorithm - The Big O
-# sorting_algorithms
+# Sorting Algorithm - The Big O Notation
+
+![Images](https://www.thetechedvocate.org/wp-content/uploads/2023/10/1_q2VFIS_3aSZ2SnaTemmtuw-660x400@2x.jpg#xxxxxxxxxxxx)
