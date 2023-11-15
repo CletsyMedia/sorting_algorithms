@@ -1,0 +1,3 @@
+O(log^2(n))// Average case
+O(log^2(n))// Worse case
+O(log^2(n))// Best case
