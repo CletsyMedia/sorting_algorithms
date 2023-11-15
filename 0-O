@@ -1,4 +1,0 @@
-O(n) //Best case: Array sorted
-O(n^2) // Average case
-O(n^2) // Worst case
-
