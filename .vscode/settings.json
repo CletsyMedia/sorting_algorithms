@@ -1,6 +1,7 @@
 {
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
-    "0-o": "cpp"
+    "0-o": "cpp",
+    "103-o": "cpp"
   }
 }
