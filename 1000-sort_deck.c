@@ -42,10 +42,12 @@ char get_val(deck_node_t *card)
 													"6", "7", "8", "9", "10", "Jack", "Queen"};
 	const size_t num_values = sizeof(values) / sizeof(values[0]);
 
-	for (size_t i = 0; i < num_values; i++)
+	size_t a;
+
+	for (a = 0; a < num_values; a++)
 	{
-		if (_strcmp(card->card->value, values[i]) == 0)
-			return ((char)i);
+		if (_strcmp(card->card->value, values[a]) == 0)
+			return ((char)a);
 	}
 	/* Default value for unmatched strings (e.g., "King") */
 	return ((char)num_values);
