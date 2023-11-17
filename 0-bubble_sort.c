@@ -6,8 +6,7 @@
  * @b: Pointer to the second integer
  *
  * Description:
- * This function swaps the values stored in the memory locations
- * pointed to by @a and @b.
+ * This function swaps the values stored in the memory location
  */
 void swap_integers(int *a, int *b)
 {
