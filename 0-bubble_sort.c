@@ -34,8 +34,8 @@ void swap_integers(int *a, int *b)
 void bubble_sort(int *array, size_t size)
 {
 	size_t a;
-	bool bubb_sort = false;
 	size_t length = size;
+	bool bubb_sort = false;
 
 	if (array == NULL || size < 2)
 		return;
