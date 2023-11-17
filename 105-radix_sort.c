@@ -54,7 +54,7 @@ void radix_counter_sort(int *array, size_t size, int sig_dig, int *buffs)
 	counter[i] += counter[i - 1];
 
 	/* Build the sorted array using the counter array */
-	for (i = size - 1; i >= 0; i--)
+	for (i = size - 1; i > 0; i--)
 	{
 	int digit = (array[i] / sig_dig) % 10;
 
