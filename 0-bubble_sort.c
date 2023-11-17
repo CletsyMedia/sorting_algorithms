@@ -11,12 +11,12 @@
  */
 void swap_integers(int *a, int *b)
 {
-	int temp = *a;
+	int temp;
 
+	temp = *a;
 	*a = *b;
 	*b = temp;
 }
-
 
 /**
  * bubble_sort - Sorts an array of integers in ascending order.
@@ -38,20 +38,20 @@ void bubble_sort(int *array, size_t size)
 	size_t length = size;
 
 	if (array == NULL || size < 2)
-	return;
+		return;
 
 	while (bubb_sort == false)
 	{
-	bubb_sort = true;
-	for (a = 0; a < length - 1; a++)
-	{
-	if (array[a] > array[a + 1])
-	{
-	swap_integers(array + a, array + a + 1);
-	print_array(array, size);
-	bubb_sort = false;
-	}
-	}
-	length--;
+		bubb_sort = true;
+		for (a = 0; a < length - 1; a++)
+		{
+			if (array[a] > array[a + 1])
+			{
+				swap_integers(array + a, array + a + 1);
+				print_array(array, size);
+				bubb_sort = false;
+			}
+		}
+		length--;
 	}
 }
