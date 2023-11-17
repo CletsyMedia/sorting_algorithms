@@ -13,15 +13,13 @@ void radix_sort(int *array, size_t size);
  */
 int get_maximum(int *array, int size)
 {
-	int a = 1;
-	int maximum = array[0];
+	int a;
+	int maximum;
 
-	while (a < size)
+	for (maximum = array[0], a = 1; a < size; a++)
 	{
-	if (array[a] > maximum)
-	maximum = array[a];
-
-	a++;
+		if (array[a] > maximum)
+			maximum = array[a];
 	}
 
 	return (maximum);
@@ -47,18 +45,17 @@ void radix_counter_sort(int *array, size_t size, int sig_dig, int *buffs)
 
 	/* Count occurrences of each digit at the current significant digit */
 	for (i = 0; i < size; i++)
-	counter[(array[i] / sig_dig) % 10]++;
+	counter[(array[i] / sig_dig) % 10] += 1;
 
 	/* Update counter array to store the actual position of each digit */
 	for (i = 1; i < 10; i++)
 	counter[i] += counter[i - 1];
 
 	/* Build the sorted array using the counter array */
-	for (i = size - 1; i > 0; i--)
+	for (i = size - 1; (int)i >= 0; i--)
 	{
-	int digit = (array[i] / sig_dig) % 10;
-
-	buffs[--counter[digit]] = array[i];
+		buffs[counter[(array[i] / sig_dig) % 10] - 1] = array[i];
+		counter[(array[i] / sig_dig) % 10] -= 1;
 	}
 
 	/* Copy the sorted elements back to the original array */
