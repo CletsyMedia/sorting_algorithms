@@ -1,46 +1,56 @@
 #include "sort.h"
 
 /**
- * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
+ * swap_integers - Swaps the values of two integers
+ * @a: Pointer to the first integer
+ * @b: Pointer to the second integer
+ *
+ * Description:
+ * This function swaps the values stored in the memory location
  */
-void swap_ints(int *a, int *b)
+void swap_integers(int *a, int *b)
 {
-	int tmp;
+	int temp;
 
-	tmp = *a;
+	temp = *a;
 	*a = *b;
-	*b = tmp;
+	*b = temp;
 }
 
 /**
- * bubble_sort - Sort an array of integers in ascending order.
+ * bubble_sort - Sorts an array of integers in ascending order.
  * @array: An array of integers to sort.
  * @size: The size of the array.
  *
- * Description: Prints the array after each swap.
+ * Description:
+ * This function uses the Bubble Sort algorithm to sort the given integer
+ * array in ascending order. It compares adjacent elements, swaps them if
+ * they are in the wrong order, and repeats this process until the array is
+ * sorted. The function also prints the array after each swap.
+ *
+ * Return: No return value (void). The original array is sorted in place.
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, len = size;
-	bool bubbly = false;
+	size_t a;
+	size_t length = size;
+	bool bubb_sort = false;
 
 	if (array == NULL || size < 2)
 		return;
 
-	while (bubbly == false)
+	while (bubb_sort == false)
 	{
-		bubbly = true;
-		for (i = 0; i < len - 1; i++)
+		bubb_sort = true;
+		for (a = 0; a < length - 1; a++)
 		{
-			if (array[i] > array[i + 1])
+			if (array[a] > array[a + 1])
 			{
-				swap_ints(array + i, array + i + 1);
+				swap_integers(array + a, array + a + 1);
 				print_array(array, size);
-				bubbly = false;
+				bubb_sort = false;
 			}
 		}
-		len--;
+		length--;
 	}
 }
