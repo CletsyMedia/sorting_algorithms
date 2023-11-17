@@ -1,6 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * swap_integers - Swaps the values of two integers
