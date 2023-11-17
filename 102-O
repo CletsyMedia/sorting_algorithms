@@ -1,4 +1,3 @@
-O(n+k) // Best case
-O(n+k) // Average case
-O(n+k) // Worse case
-
+O(n+k)
+O(n+k)
+O(n+k)
