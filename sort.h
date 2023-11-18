@@ -52,5 +52,7 @@ void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
+/* Swapping nodes in a doubly linked list */
+void swap_integers(listint_t *a, listint_t **b);
 
 #endif /* SORT_H */
